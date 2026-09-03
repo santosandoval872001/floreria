@@ -1,0 +1,447 @@
+/* NAVBAR ESCRITORIO */
+
+.navbar-floreria {
+  background-color: #fff9f7;
+  padding: 18px 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.navbar-brand:hover {
+  color: #7a8b6f;
+}
+
+.navbar-floreria .nav-link {
+  color: #444;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.navbar-floreria .nav-link:hover {
+  color: #b76e79;
+}
+
+/* NAVBAR DEL CELULAR */
+
+.navbar-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-floreria {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #fff9f7;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px 5px;
+
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+  }
+
+  .mobile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 0.75rem;
+
+    padding: 3px 12px;
+
+    transition: 0.3s;
+  }
+
+  .mobile-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .mobile-link:hover {
+    color: #b76e79;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 75px;
+  }
+}
+
+/* HERO */
+
+.hero {
+  min-height: 85vh;
+
+  background-image:
+    linear-gradient(rgba(255, 249, 247, 0.35),
+      rgba(255, 249, 247, 0.65)),
+    url("../img/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+}
+
+.hero-contenido {
+  max-width: 700px;
+}
+
+.hero-subtitulo {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}
+
+.hero-descripcion {
+  font-size: 1.5rem;
+
+  max-width: 550px;
+
+  margin: 0 auto 30px;
+
+  line-height: 1.7;
+}
+
+.btn-flor {
+  background-color: #b76e79;
+
+  color: white;
+
+  padding: 12px 30px;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.btn-flor:hover {
+  background-color: #7a8b6f;
+
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+@media(max-width: 767px) {
+
+  .hero {
+    min-height: 80vh;
+
+    padding: 60px 20px;
+
+    .hero-subtitulo {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-descripcion {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* SECCION FLORES */
+
+.flores {
+  padding: 100px 0;
+  background-color: #fff9f7;
+}
+
+.seccion-titulo {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.seccion-titulo p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.seccion-titulo h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.seccion-titulo span {
+  color: #666;
+}
+
+.card-flor {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background-color: white;
+
+  height: 100%;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+  transition: 0.3s;
+}
+
+.card-flor:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-flor img {
+  height: 280px;
+
+  object-fit: cover;
+
+  width: 100%;
+}
+
+.card-flor .card-body {
+  padding: 25px;
+}
+
+.card-flor .card-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.card-flor .card-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+.card-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 25px;
+}
+
+.precio {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+
+  .flores {
+    padding: 70px 15px;
+  }
+
+  .seccion-titulo h2 {
+    font-size: 2.2rem;
+  }
+
+  .card-flor img {
+    height: 250px;
+  }
+}
+
+/* OCASIONES */
+
+.ocasiones {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.ocasion-card {
+  display: block;
+
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.ocasion-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.ocasion-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(transparent,
+      rgba(0, 0, 0, 0.65));
+}
+
+.ocasion-card:hover {
+  transform: scale(1.08);
+}
+
+.ocasion-overlay {
+  position: absolute;
+
+  bottom: 25px;
+  left: 25px;
+
+  z-index: 2;
+}
+
+.ocasion-overlay h3 {
+  margin: 0 0 5px;
+
+  font-size: 1.5rem;
+
+  font-weight: 500;
+}
+
+.ocasion-overlay span {
+  font-size: 0.9rem;
+
+  opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+
+  .ocasiones {
+    padding: 70px 15px;
+  }
+
+  .ocasion-card {
+    height: 250px;
+  }
+}
+
+/* GALERIA */
+
+.galeria {
+  padding: 100px 0;
+  background-color: #fff9f7;
+}
+
+.foto-galeria {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.foto-galeria img {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.4s;
+}
+
+.foto-galeria:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .galeria {
+    padding: 70px 10px;
+  }
+
+  .foto-galeria img {
+    height: 220px;
+  }
+}
+
+.modal-galeria {
+  display: none;
+
+  position: fixed;
+
+  z-index: 0;
+
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.92);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+}
+
+.modal-galeria img {
+  max-width: 90%;
+  max-height: 90vh;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+/* boton de cerrar */
+
+.cerrar-galeria {
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 3rem;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
