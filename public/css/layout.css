@@ -1,0 +1,114 @@
+body {
+  background-color: #fff9f7;
+}
+
+.carrito-container {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.titulo-carrito {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5a3d42;
+  margin-bottom: 35px;
+}
+
+.titulo-carrito span {
+  font-size: 2rem;
+}
+
+.card-carrito {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-carrito:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8) !important;
+}
+
+.imagen-carrito {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.nombre-flor {
+  color: #5a3d42;
+  border-radius: 15px;
+}
+
+.precio-unitario {
+  color: #888;
+  font-size: .9rem;
+}
+
+.cantidad {
+  background: #fff0f3;
+  color: #b34d67;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.subtotal {
+  color: #5a3d42;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.resumen-carrito {
+  border: none;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.total-precio {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  color: white;
+}
+
+.btn-seguir {
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.carrito-vacio {
+  border: none;
+  border-radius: 22px;
+  padding: 45px 25px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* aumentar o disminuir */
+
+.btn-cantidad {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0;
+}

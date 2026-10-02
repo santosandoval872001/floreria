@@ -28,85 +28,128 @@
                 Panel de administración
             </h1>
 
+            {{--  Estadisticas  --}}
             <div class="row g-4 mb-4">
 
                 {{--  Total  --}}
-                <col-12 class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-3">
 
-                    <div class="card shadow-sm border-0 h-100">
+                    <a href="{{ route('admin.flores') }}" class="text-decoration-none text-dark">
 
-                        <div class="card-body">
+                        <div class="card shadow-sm border-0 h-100">
 
-                            <p class="text-muted mb-1">
-                                Total de flores
-                            </p>
+                            <div class="card-body">
 
-                            <h2 class="fw-bold mb-0 text-center">
-                                {{ $totalFlores }}
-                            </h2>
+                                <p class="text-muted mb-1">
+                                    Total de flores
+                                </p>
 
-                            <small class="text-muted">
-                                Flores registradas
-                            </small>
+                                <h2 class="fw-bold mb-0 text-center">
+                                    {{ $totalFlores }}
+                                </h2>
+
+                                <small class="text-muted">
+                                    Flores registradas
+                                </small>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
-                </col-12>
+                </div>
 
                 {{--  Disponibles  --}}
-                <col-12 class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-3">
 
-                    <div class="card shadow-sm border-0 h-100">
+                    <a href="{{ route('admin.flores', ['disponible' => 1]) }}" class="text-decoration-none text-dark">
 
-                        <div class="card-body">
+                        <div class="card shadow-sm border-0 h-100">
 
-                            <p class="text-muted mb-1">
-                                Disponibles
-                            </p>
+                            <div class="card-body">
 
-                            <h2 class="fw-bold mb-0 text-center text-success">
-                                {{ $floresDisponibles }}
-                            </h2>
+                                <p class="text-muted mb-1">
+                                    Disponibles
+                                </p>
 
-                            <small class="text-muted">
-                                Flores disponibles para venta
-                            </small>
+                                <h2 class="fw-bold mb-0 text-center text-success">
+                                    {{ $floresDisponibles }}
+                                </h2>
+
+                                <small class="text-muted">
+                                    Flores disponibles para venta
+                                </small>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
-                </col-12>
+                </div>
 
                 {{--  Agotadas  --}}
-                <col-12 class="col-md-4">
+                <div class="col-12 col-md-6 col-lg-3">
 
-                    <div class="card shadow-sm border-0 h-100">
+                    <a href="{{ route('admin.flores', ['disponible' => 0]) }}" class="text-decoration-none text-dark">
 
-                        <div class="card-body">
+                        <div class="card shadow-sm border-0 h-100">
 
-                            <p class="text-muted mb-1">
-                                Agotadas
-                            </p>
+                            <div class="card-body">
 
-                            <h2 class="fw-bold mb-0 text-center text-danger">
-                                {{ $floresAgotadas }}
-                            </h2>
+                                <p class="text-muted mb-1">
+                                    Agotadas
+                                </p>
 
-                            <small class="text-muted">
-                                Flores actualmente agotadas
-                            </small>
+                                <h2 class="fw-bold mb-0 text-center text-danger">
+                                    {{ $floresAgotadas }}
+                                </h2>
+
+                                <small class="text-muted">
+                                    Flores actualmente agotadas
+                                </small>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
-                </col-12>
+                </div>
+
+                {{--  Gelería  --}}
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <a href="{{ route('admin.galeria') }}" class="text-decoration-none text-dark">
+
+                        <div class="card shadow-sm border-0 h-100">
+
+                            <div class="card-body">
+
+                                <p class="text-muted mb-1">
+                                    Galería
+                                </p>
+
+                                <h2 class="fw-bold mb-0 text-center">
+                                    {{ $totalGaleria }}
+                                </h2>
+
+                                <small class="text-muted">
+                                    Imágenes en galería
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
 
             </div>
 
+            {{--  Acciones  --}}
             <div class="d-flex justify-content-between align-items-center mb-4">
 
                 <h2>Florería</h2>

@@ -47,3 +47,8 @@
     display: block;
   }
 }
+
+/* Pedido  */
+.fila-pedido:hover {
+  background-color: #f8f9fa;
+}

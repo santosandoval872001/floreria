@@ -13,6 +13,7 @@ class FlorController extends Controller
     public function index()
     {
         $flores = Flor::all();
+        
         $imagenesGaleria = Galeria::orderBy('orden')->get();
 
         return view('inicio', compact('flores', 'imagenesGaleria'));
@@ -23,13 +24,18 @@ class FlorController extends Controller
     {
 
         $totalFlores = Flor::count();
+
         $floresDisponibles = Flor::where('disponible', true)->count();
+
         $floresAgotadas = Flor::where('disponible', false)->count();
+
+        $totalGaleria = Galeria::count();
 
         return view('admin.index', compact(
             'totalFlores',
             'floresDisponibles',
-            'floresAgotadas'
+            'floresAgotadas',
+            'totalGaleria'
         ));
     }
 
@@ -138,9 +144,15 @@ class FlorController extends Controller
     }
 
     // Funcion para flores
-    public function flores()
+    public function flores(Request $request)
     {
-        $flores = Flor::all();
+        $query = Flor::query();
+
+        if ($request->has('disponible')) {
+            $query->where('disponible', $request->boolean('disponible'));
+        }
+
+        $flores = $query->get();
 
         return view('admin.flores.index', compact('flores'));
     }

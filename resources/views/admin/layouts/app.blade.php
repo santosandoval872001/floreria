@@ -20,7 +20,7 @@
         {{--  Sidebar  --}}
         <aside class="sidebar bg-dark text-white p-3" style="width: 250px; min-height: 100vh;">
 
-            <h4 class="text-center mb-4">
+            <h4 class="text-center mb-4" onclick="window.location='{{ url('/') }}'" style="cursor: pointer">
                 🌷 Florería
             </h4>
 
@@ -29,7 +29,7 @@
             <ul class="nav nav-pills flex-column gap-2">
                 <li class="nav-item">
 
-                    <a href="{{ route('admin') }}" class="nav-link text-white">
+                    <a href="{{ route('admin') }}" class="btn btn-outline-light w-100 mb-2">
                         <img src="{{ asset('iconos/home.png') }}" alt="dashboard"> Dashboard
                     </a>
 
@@ -37,7 +37,7 @@
 
                 <li class="nav-item">
 
-                    <a href="{{ route('admin.flores') }}" class="nav-link text-white">
+                    <a href="{{ route('admin.flores') }}" class="btn btn-outline-light w-100 mb-2">
                         <img src="{{ asset('iconos/flores.png') }}" alt="flores"> Flores
                     </a>
 
@@ -45,7 +45,7 @@
 
                 <li class="nav-item">
 
-                    <a href="{{ route('admin.galeria') }}" class="nav-link text-white">
+                    <a href="{{ route('admin.galeria') }}" class="btn btn-outline-light w-100 mb-2">
                         <img src="{{ asset('iconos/galeria.png') }}" alt="Galería"> Galería
                     </a>
 
@@ -53,7 +53,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{ route('admin.pedidos') }}" class="btn btn-outline-light w-100 mb-2">
                         <img src="{{ asset('iconos/pedidos.png') }}" alt="Pedidos"> Pedidos
                     </a>
 
@@ -61,7 +61,7 @@
 
                 <li class="nav-item">
 
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{ route('admin.configuracion') }}" class="btn btn-outline-light w-100 mb-2">
                         <img src="{{ asset('iconos/confi.png') }}" alt="Confi"> Configuración
                     </a>
 
@@ -74,6 +74,15 @@
             <a href="{{ url('/') }}" class="btn btn-outline-light w-100">
                 Ver página
             </a>
+
+            <form action="{{ route('logout') }}" method="POST" class="mt-2">
+                @csrf
+
+                <button type="submit" class="btn btn-outline-danger w-100">
+                    <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+                </button>
+
+            </form>
 
         </aside>
 
@@ -94,6 +103,28 @@
 
                 </div>
 
+                <div class="container mt-3">
+
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+
+                            <button type="button" class="btn-close" data-bs-dismiss="alert">
+                            </button>
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ session('error') }}
+
+                            <button type="button" class="btn-close" data-bs-dismiss="alert">
+                            </button>
+                        </div>
+                    @endif
+
+                </div>
+
             </nav>
 
             <div class="container-fluid p-4">
@@ -106,8 +137,11 @@
 
     </div>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+
+
+</body>
 
 </html>

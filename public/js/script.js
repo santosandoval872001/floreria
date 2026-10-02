@@ -61,3 +61,14 @@ function imagenAnterior() {
   mostrarImagen();
 }
 
+document.querySelectorAll('.imagen-flor-admin').forEach(function(imagen) {
+
+      imagen.addEventListener('click', function() {
+
+      const imagenModal = document.getElementById('imagenModalFlor');
+      
+      imagenModal.src = this.dataset.imagen;
+
+      });
+
+});

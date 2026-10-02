@@ -59,6 +59,12 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{ route('carrito.index') }}" class="btn btn-white" target="Carrito">
+                            <img src="{{ asset('iconos/carro-de-la-compra.png') }}" alt="">
+                        </a>
+                    </li>
+
                 </ul>
 
             </div>
@@ -98,11 +104,11 @@
         <div class="hero-contenido">
 
             <h1>
-                Flores que hablan por ti
+                {{ $configuracion->titulo_hero }}
             </h1>
 
             <p class="hero-descripcion">
-                Creamos arreglos florales para hacer especiales los momentos más importantes.
+                {{ $configuracion->descripcion_hero }}
             </p>
 
             <a href="#flores" class="btn btn-flor">
@@ -174,9 +180,13 @@
                                             ${{ number_format($flor->precio, 2) }}
                                         </span>
 
-                                        <a href="#" class="btn btn-flor">
-                                            Pedir
-                                        </a>
+                                        <form action="{{ route('carrito.agregar', $flor) }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-flor">
+                                                Pedir
+                                            </button>
+
+                                        </form>
 
                                     </div>
                                 @else
